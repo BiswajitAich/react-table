@@ -1,0 +1,55 @@
+[
+    {
+      "date": "23-08-2023",
+      "details": [
+        {
+          "id": "01",
+          "image": "/LS.jpg",
+          "code": "00vj1",
+          "buyPrice": "50",
+          "sellPrice": "100"
+        },
+        {
+          "id": "02",
+          "image": "/LS.jpg",
+          "code": "00vj2",
+          "buyPrice": "51",
+          "sellPrice": "101"
+        },
+        {
+          "id": "03",
+          "image": "/LS.jpg",
+          "code": "00vj2",
+          "buyPrice": "55555555555555555555555555555555555551",
+          "sellPrice": "101"
+        }
+      ]
+    },
+    {
+      "date": "22-09-2023",
+      "details": [
+        {
+          "id": "01",
+          "image": "/LSrgbrtbhrtub.jpg",
+          "code": "00vjjj1",
+          "buyPrice": "5",
+          "sellPrice": "1000"
+        },
+        {
+          "id": "02",
+          "image": "/LujS.jpg",
+          "code": "040vj2",
+          "buyPrice": "512",
+          "sellPrice": "1001"
+        },
+        {
+          "id": "03",
+          "image": "/LSp.jpg",
+          "code": "00vo;/j2",
+          "buyPrice": "521",
+          "sellPrice": "1001"
+        }
+      ]
+    }
+  ]
+  
