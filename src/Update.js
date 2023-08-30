@@ -7,6 +7,7 @@ const Update = () => {
   const [purchase, setPurchase] = useState('');
   const [sell, setSell] = useState('');
   const [image, setImage] = useState('');
+  const [date, setDate] = useState('');
   const [pl, setPl] = useState('');
   const [dataToUpdate, setDataToUpdate] = useState('');
 
@@ -22,6 +23,7 @@ const Update = () => {
         setImage(dataToUpdate.image);
         setPurchase(dataToUpdate.purchase);
         setSell(dataToUpdate.sell);
+        setDate(dataToUpdate.date);
         calculatePL(dataToUpdate.purchase, dataToUpdate.sell);
       }
     }
@@ -68,11 +70,22 @@ const Update = () => {
       setPl(0);
     }
   };
+  const dateChange=(e)=> {
+    e.preventDefault();
+    setDate(e.target.value);
+  };
 
   return (
     <div className="form">
       <h1>UPDATE</h1>
       <form>
+        <label htmlFor="date">DATE</label>
+        <input 
+          type="date"
+          name="date"
+          value={date}
+          onChange={dateChange}
+          />
         <label htmlFor="image">Image Link</label>
         <input
           type="text"
