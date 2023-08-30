@@ -3,14 +3,17 @@ import { Link } from "react-router-dom";
 
 const Table = () => {
   const [dataList, setDataList] = useState([]);
-  const [tPurchase, setTPurchase] = useState(0);
-  const [tSell, setTSell] = useState(0);
-  const [tPOrL, setTPOrL] = useState(0);
-
+  const [tPurchase, setTPurchaseconst parsedData = JSON.parse(existingData);
+     
   useEffect(() => {
     const existingData = localStorage.getItem("data");
     if (existingData) {
-      setDataList(JSON.parse(existingData));
+     const parsedData = JSON.parse(existingData);;
+       parsedData.sort((a, b) => {
+       const dateA = new Date(a.date);
+       const dateB = new Date(b.date);
+       return dateA - dateB;
+     });
     }
   }, []);
 
@@ -38,6 +41,7 @@ const Table = () => {
           <thead>
             <tr>
               <th>SL No°</th>
+              <th>DATE</th>
               <th>IMAGE</th>
               <th>PURCHASE</th>
               <th>SELL</th>
@@ -50,6 +54,7 @@ const Table = () => {
             {dataList.map((data, index) => (
               <tr key={index}>
                 <td>{index + 1}</td>
+                <td>{data.date}</td>
                 <td className="image">
                   <a href={data.image} target="_blank" rel="noopener noreferrer">
                     <img src={data.image} alt={data.image} style={{ width: "80px", height: "auto" }} />
