@@ -9,6 +9,7 @@ const TableInput = () => {
   const [image, setImage] = useState('')
   const [pl, setPl] = useState(0)
   const [error, setError] = useState(false)
+  const [date, setDate] = useState(currentDate)
 
   const handelClear = (e) => {
     e.preventDefault();
@@ -31,7 +32,8 @@ const TableInput = () => {
       let newData = {
         image: image,
         purchase: purchase,
-        sell: sell
+        sell: sell,
+        date: date
       };
       if (existingData) {
         const parsedData = JSON.parse(existingData);
@@ -56,6 +58,12 @@ const TableInput = () => {
   return (
     <div>
       <h1>ADD NEW ROW</h1>
+      <input 
+        type="date"
+        name="date" 
+        value={date}
+        onChange={(e) => setDate(e.target.value)}
+        />
       <div className="form">
         <form>
           <label htmlFor="image">Image Link</label>
